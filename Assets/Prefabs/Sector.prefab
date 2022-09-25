@@ -98,3 +98,4 @@ MonoBehaviour:
   - {fileID: 6499205034939487381, guid: f9bfb936b2dbdda46807e00038c60d61, type: 3}
   asteroidCount: {x: 25, y: 35}
   sectorPrefab: {fileID: 7363542955482381584}
+  collider: {fileID: 7363542955482381586}

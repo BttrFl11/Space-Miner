@@ -6,8 +6,8 @@ public class Sector : MonoBehaviour
     [SerializeField] private Asteroid[] asteroids;
     [SerializeField] private Vector2Int asteroidCount;
     [SerializeField] private Sector sectorPrefab;
+    [SerializeField] private new BoxCollider2D collider;
 
-    private new BoxCollider2D collider;
     private bool asteroidsSpawned = false;
 
     private static Transform asteroidParent;
@@ -17,11 +17,9 @@ public class Sector : MonoBehaviour
     {
         if(sectorGroup == null)
         {
-            asteroidParent = GameObject.Find("AsteroidParent").transform;
+            asteroidParent = GameObject.Find("_AsteroidParent").transform;
             sectorGroup = GetComponentInParent<SectorGroup>();
         }
-
-        collider = GetComponent<BoxCollider2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

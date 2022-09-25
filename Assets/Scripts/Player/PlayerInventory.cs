@@ -14,18 +14,6 @@ public class PlayerInventory : MonoBehaviour
         UpdateUI();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.TryGetComponent(out PickableItem pickableItem) && pickableItem.ItemSO != null)
-        {
-            if(inventory.GetEmptryInventorySlot(pickableItem.ItemSO) != null)
-            {
-                AddItem(pickableItem.ItemSO);
-                Destroy(pickableItem.gameObject);
-            }
-        }
-    }
-
     public void ToggleInventory()
     {
         bool active = inventoryPanel.activeSelf ? false : true;
